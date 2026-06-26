@@ -27,13 +27,13 @@ int make(char s[], int arr[])
 
 int love(int n1, int n2)
 {
-    int v[40], m = 0, i;
-    for (i = 0; i < n1 || i < n2; i++) {
+    int v[40], m = 0;
+    for (int i = 0; i < n1 || i < n2; i++) {
         if (i < n1) v[m++] = a[i];
-        if (i < n2) v[m++] = b[i];
+        if (i < n2) v[m++] = b[i];  
     }
     while (m > 2) {
-        for (i = 0; i < m - 1; i++)
+        for (int i = 0; i < m - 1; i++)
             v[i] = (v[i] + v[i+1]) % 10;
         m--;
     }
