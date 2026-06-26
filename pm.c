@@ -35,7 +35,11 @@ int love(int n1, int n2)
     while (m > 2) {
         for (i = 0; i < m - 1; i++)
             v[i] = (v[i] + v[i+1]) % 10;
-        m--;
+
+        for (i = 0; i < m - 1; i++)
+        printf("%d ", v[i]);
+    printf("\n");
+    m--;
     }
     return v[0] * 10 + v[1];
 }
